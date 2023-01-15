@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: red;
+    height: 700px;
+    /* width: 900px; */
+    display: grid;
+/* ---------------------------------------------------------------------- */
+    /* Defines number of columns */
+    /* grid-template-columns: 113px 113px 113px; */
+    
+/* ---------------------------------------------------------------------- */
+    /* Specify gap between columns */
+    column-gap: 20px; 
+
+/* ---------------------------------------------------------------------- */
+    /* Defines number of rows */
+    /* grid-template-rows: 113px 113px 113px;  */
+
+/* ---------------------------------------------------------------------- */
+    /* Specify gap between rows */
+    row-gap: 20px; 
+
+/* ---------------------------------------------------------------------- */
+    /* It is recommended that we use repeat and fr in grid. */
+    /* what it means ?🤔 */
+    /* so it means that - jitne bhi space humare pass container m hai available  */
+    /* usko complete utilize kro */
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows:  1fr 1fr 1fr; */
+
+    /* ***************************************** */
+    /* now ik condition ho agr humko ik specific item ka size change krna hai toh bs gtr m s values ko change kr do jaise l avi niche hum nae 133px specify kre hai*/
+    grid-template-rows:  133px 1fr 1fr;
+    /* fr = 1 fraction of the entire width available */
+}
+
+.item{
+    background-color: aqua;
+    /* height: 122px; */
+    /* width: 122px; */
+}
+
+
+/* 😶😶😶😶😶😶😶😶😶😶 */
+.item1{
+    /* Specify the space occupy by the the item in column/ x-axix  */
+    /* here 1 and 4 specify the line number from which our column start */
+    
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    /* let us use a short hand proprerty for above 2 lines of code */
+    grid-column: 1 / span 3;
+    /* 😶 here columns are specified by number no line */
+    background-color: black;
+    
+}
+
+
+/* 😶😶😶😶😶😶😶😶😶😶 */
+/* Now let us talk about next property i.e "justify-items" */
+/* Make sure that we always use this property in the container/main container (in that container where we use grid) */
+
+
+/* .container{
+    justify-items: center;
+} */
+
+
+/* justify-item = use krne k s phle make sure apn ne apne cells ko koi width and height diya ho vrna sb 0 show hoga web page pr. bs uss cell ko chod kr jis m items hai . */
+
+
+/* ***************************************** */
+/* now let us talk about " justify-self " */
+/* isko items / cells m use kra jata hai mainly */
+
+/* .item2{
+    justify-self: center;
+    width: 50vh;
+ } */ /* width jrur s dena vrna khel khtm 😒 */
+
+
+ /* 😶😶😶😶😶😶😶😶😶😶 */
+ 
+ /* ik aur baat kr late hai
+ 1- justify wala always work in x-axis
+ 2- align wla always work in y-anis
+  */
+
+  /* ab in kee shorthand property k baat kr late hai toh voh hai 
+  --------------------😎 place-self 😎--------------------------
+  also we can use
+  --------------------😎 place-item 😎--------------------------
+  */
+
+
+
+  /* now ik ho jiye baat 🤔 grid vs inline grid  */
